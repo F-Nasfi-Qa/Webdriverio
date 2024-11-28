@@ -8,7 +8,6 @@ import * as chai from "chai";
 Given("Google page is opened", async () => {
   console.log("Before opening browser");
   await browser.url("https://www.google.com");
-  await browser.pause(1000);
   await browser.maximizeWindow();
   console.log("After opening browser");
 });
@@ -47,5 +46,6 @@ When("Performs a web interactions", async () => {
    * 4. Slow typing
    */
 
-  $('input[type=number]').setValue("1234")
-})
+  await $("input[type=number]").setValue(1234);
+  await browser.pause(3000);
+});
