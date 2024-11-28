@@ -33,6 +33,19 @@ Then("URL should match with {string}", async (expectedUrl) => {
  */
 
 Given("A web page is opened", async () => {
-  await browser.url("https://www.google.com");
+  await browser.url("https://the-internet.herokuapp.com/inputs");
   await browser.maximizeWindow();
 });
+
+When("Performs a web interactions", async () => {
+  /**
+   * 1. Inputs box
+   * Actions:
+   * 1. Type into input box
+   * 2. Clear the field and type or just add value
+   * 3. Click and type
+   * 4. Slow typing
+   */
+
+  $('input[type=number]').setValue("1234")
+})
