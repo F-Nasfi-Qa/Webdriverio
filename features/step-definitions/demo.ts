@@ -1,6 +1,10 @@
 import { Given, When, Then } from "@wdio/cucumber-framework";
 import * as chai from "chai";
 
+/**
+ * Demo Feature
+ */
+
 Given("Google page is opened", async () => {
   console.log("Before opening browser");
   await browser.url("https://www.google.com");
@@ -22,4 +26,13 @@ Then("click on first search result", async () => {
 Then("URL should match with {string}", async (expectedUrl) => {
   console.log(`>> expectedUrl: ${expectedUrl}`);
   chai.expect(browser.getUrl(), expectedUrl);
+});
+
+/**
+ * Web Interactions Feature
+ */
+
+Given("A web page is opened", async () => {
+  await browser.url("https://www.google.com");
+  await browser.maximizeWindow();
 });

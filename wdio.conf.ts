@@ -22,7 +22,7 @@ export const config: WebdriverIO.Config = {
   // The path of the spec files will be resolved relative from the directory of
   // of the config file unless it's absolute.
   //
-  specs: [`./features/**/*.feature`],
+  specs: ["./features/**/*.feature"],
   // Patterns to exclude.
   exclude: [],
   //
@@ -60,7 +60,7 @@ export const config: WebdriverIO.Config = {
   // Define all options that are relevant for the WebdriverIO instance here
   //
   // Level of logging verbosity: trace | debug | info | warn | error | silent
-  logLevel: "warn",
+  logLevel: "info",
   //
   // Set specific log levels per logger
   // loggers:
@@ -132,7 +132,7 @@ export const config: WebdriverIO.Config = {
     // <boolean> show full backtrace for errors
     backtrace: false,
     // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
-    requireModule: [],
+    requireModule: ["ts-node/register"],
     // <boolean> invoke formatters without executing steps
     dryRun: false,
     // <boolean> abort the run on first failure

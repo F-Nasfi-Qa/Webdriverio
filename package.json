@@ -25,6 +25,7 @@
     "@wdio/mocha-framework": "^9.2.8",
     "@wdio/selenium-standalone-service": "^8.14.0",
     "@wdio/spec-reporter": "^9.2.14",
+    "@wdio/types": "^9.2.2",
     "chai": "^5.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
