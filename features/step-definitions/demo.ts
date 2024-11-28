@@ -32,7 +32,7 @@ Then("URL should match with {string}", async (expectedUrl) => {
  */
 
 Given("A web page is opened", async () => {
-  await browser.url("https://the-internet.herokuapp.com/inputs");
+  await browser.url("/inputs");
   await browser.maximizeWindow();
 });
 
@@ -47,5 +47,4 @@ When("Performs a web interactions", async () => {
    */
 
   await $("input[type=number]").setValue(1234);
-  await browser.pause(3000);
 });

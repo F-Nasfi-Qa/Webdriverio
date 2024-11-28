@@ -1,5 +1,6 @@
 Feature: Demo feature
 
+  @demo
   Scenario Outline: Demo scenario
     Given Google page is opened
     When Search with <searchItem>
@@ -7,5 +8,5 @@ Feature: Demo feature
     Then URL should match with <expectedUrl>
 
     Examples:
-      | testId | searchItem | expectedUrl               |
-      | sc_01  | 'wdio'     | 'https://webdriver.io'    |
+      | testId | searchItem | expectedUrl            |
+      | sc_01  | 'wdio'     | 'https://webdriver.io' |
