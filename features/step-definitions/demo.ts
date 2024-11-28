@@ -37,14 +37,8 @@ Given("A web page is opened", async () => {
 });
 
 When("Performs a web interactions", async () => {
-  /**
-   * 1. Inputs box
-   * Actions:
-   * 1. Type into input box
-   * 2. Clear the field and type or just add value
-   * 3. Click and type
-   * 4. Slow typing
-   */
-
-  await $("input[type=number]").setValue(1234);
+  // 1. Inputs box
+   //await $("input[type=number]").setValue(1234);
+  
+  
 });
