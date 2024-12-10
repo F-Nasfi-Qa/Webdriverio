@@ -24,7 +24,7 @@ Then("click on first search result", async () => {
 
 Then("URL should match with {string}", async (expectedUrl) => {
   console.log(`>> expectedUrl: ${expectedUrl}`);
-  chai.expect(browser.getUrl(), expectedUrl);
+  chai.expect(browser.getUrl()).to.equal(expectedUrl);
 });
 
 /**
@@ -32,13 +32,20 @@ Then("URL should match with {string}", async (expectedUrl) => {
  */
 
 Given("A web page is opened", async () => {
-  await browser.url("/inputs");
+  await browser.url("");
   await browser.maximizeWindow();
 });
 
 When("Performs a web interactions", async () => {
   // 1. Inputs box
-   //await $("input[type=number]").setValue(1234);
-  
-  
+  /**
+   * await $("a[href='/inputs']").click()
+   * await $("input[type=number]").setValue(1234);
+   */
+
+  // 2. Dropdown
+  await $("a[href='/dropdown']").click();
+  let val = await $("//*[@id='dropdown']/option[1]").getText();
+  console.log("the value is: " + val);
+  chai.expect(val).to.equal("Please select an option");
 });
