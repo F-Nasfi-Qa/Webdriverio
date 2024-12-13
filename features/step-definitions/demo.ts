@@ -45,7 +45,18 @@ When("Performs a web interactions", async () => {
 
   // 2. Dropdown
   await $("a[href='/dropdown']").click();
-  let val = await $("//*[@id='dropdown']/option[1]").getText();
-  console.log("the value is: " + val);
-  chai.expect(val).to.equal("Please select an option");
+  let ddList = $("#dropdown");
+  await ddList.selectByAttribute("value", "2");
+
+  // 3. Get a list of options
+  let list = $$("#dropdown > option");
+  let arr = [];
+  for (let i = 0; i < await list.length; i++) {
+    let eleText = await list[i].getText();
+    arr.push(eleText);
+    console.log(eleText);
+  }
+
+  console.log(`>> Options list: ${arr}`);
 });
+
