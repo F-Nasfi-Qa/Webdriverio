@@ -1,5 +1,4 @@
-import { Given, When, Then } from "@wdio/cucumber-framework";
-import * as chai from "chai";
+import { Given, When } from "@wdio/cucumber-framework";
 
 /**
  * Web Interactions Feature
@@ -18,12 +17,12 @@ When("Performs a web interactions", async () => {
    */
 
   // 2. Dropdown
-   // 2.a Select by attribute
+  // 2.a Select by attribute
   await $("a[href='/dropdown']").click();
   let ddList = $("#dropdown");
   await ddList.selectByAttribute("value", "2");
 
-   // 2.b Get a list of options
+  // 2.b Get a list of options
   let list = $$("#dropdown > option");
   let arr = [];
   for (let i = 0; i < (await list.length); i++) {
