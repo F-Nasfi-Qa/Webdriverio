@@ -1,4 +1,5 @@
 import { Given, When } from "@wdio/cucumber-framework";
+//import * as chai from "chai";
 
 /**
  * Web Interactions Feature
@@ -17,8 +18,10 @@ When("Performs a web interactions", async () => {
    */
 
   // 2. Dropdown
+  /** 
+   await $("a[href='/dropdown']").click();
+
   // 2.a Select by attribute
-  await $("a[href='/dropdown']").click();
   let ddList = $("#dropdown");
   await ddList.selectByAttribute("value", "2");
 
@@ -29,4 +32,26 @@ When("Performs a web interactions", async () => {
     let eleText = await list[i].getText();
     arr.push(eleText);
   }
+    */
+
+  // 3.Checkbox
+  /** 
+  await $("//*[@id='content']/ul/li[6]/a").click();
+  
+  // 3.a Select an option / assert if option selected
+  let checkbox_1 = $("//*[@id='checkboxes']/input[2]");
+  let isChecked = checkbox_1.isSelected();
+  chai.expect(isChecked).to.be.false
+   
+
+  // 3.b Select all options
+  let checkboxArr = $$("//*[@id='checkboxes']/input");
+  for (let i = 0; i < (await checkboxArr.length); i++) {
+    let checkboxEle = checkboxArr[i];
+    if (!(await checkboxEle.isSelected())) {
+      await checkboxEle.click();
+    }
+  }
+   */
+  await browser.debug();
 });
