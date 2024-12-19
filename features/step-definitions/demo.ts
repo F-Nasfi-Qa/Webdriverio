@@ -24,9 +24,5 @@ Then("click on first search result", async () => {
 
 Then("URL should match with {string}", async (expectedUrl) => {
   console.log(`>> expectedUrl: ${expectedUrl}`);
-  chai.expect(browser.getUrl()).to.equal(expectedUrl);
+  chai.expect(await browser.getUrl()).to.equal(expectedUrl);
 });
-
-
-
-
