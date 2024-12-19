@@ -14,15 +14,21 @@ When("Alerts and popups interactions", async () => {
 
   // 1.Open the Js alert
   await $("=Click for JS Alert").click();
-  // if (await browser.isAlertOpen()) {
-  //   await browser.acceptAlert();
-  // }
+  //if (await browser.isAlertOpen()) {
+    //await browser.acceptAlert();
+  //}
 
   // 2.Open the Js confirm
   await $("=Click for JS Confirm").click();
-  // if (await browser.isAlertOpen()) {
-  //   await browser.dismissAlert();
-  // }
+  // // if (await browser.isAlertOpen()) {
+  // //   await browser.dismissAlert();
+  // // }
 
-  //await browser.debug();
+  // 3.Open the Js prompt
+  await $("=Click for JS Prompt").click();
+  // // if (await browser.isAlertOpen()) {
+  // //   await browser.dismissAlert();
+  // // }
+
+  await browser.debug();
 });

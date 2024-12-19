@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "wdio": "wdio run ./wdio.conf.ts"
+    "wdio": "wdio run ./wdio.conf.js"
   },
   "keywords": [
     "wdio",
@@ -18,7 +18,6 @@
   "license": "ISC",
   "devDependencies": {
     "@types/chai": "^5.0.1",
-    "@types/node": "^22.10.2",
     "@wdio/allure-reporter": "^9.2.8",
     "@wdio/cli": "^9.2.8",
     "@wdio/cucumber-framework": "^9.2.8",
@@ -29,8 +28,6 @@
     "@wdio/types": "^9.2.8",
     "chai": "^5.1.2",
     "glob": "^11.0.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.7.2",
     "webdriver": "^9.2.8"
   }
 }
