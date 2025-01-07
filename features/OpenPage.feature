@@ -1,7 +1,7 @@
-Feature: Demo feature
+Feature: Open page
 
-  @demo
-  Scenario Outline: Demo scenario
+  @OpenPage
+  Scenario Outline: Open page scenario
     Given Google page is opened
     When Search with <searchItem>
     Then click on first search result

@@ -1,11 +1,10 @@
 import { Given, When } from "@wdio/cucumber-framework";
-import { browser } from "@wdio/globals";
 
 /**
  * Alerts and popups feature
  */
 
-Given("Main page is opened", async () => {
+Given("Alerts and popups page is opened", async () => {
   await browser.url("");
   await browser.maximizeWindow();
 });
