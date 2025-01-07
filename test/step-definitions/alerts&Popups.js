@@ -1,12 +1,16 @@
 import { Given, When } from "@wdio/cucumber-framework";
-
+import * as chai from "chai";
 /**
  * Alerts and popups feature
  */
 
 Given("Alerts and popups page is opened", async () => {
+  let expectedUrl = "https://the-internet.herokuapp.com/";
+
   await browser.url("");
   await browser.maximizeWindow();
+
+  chai.expect(await browser.getUrl()).to.equal(expectedUrl);
 });
 
 When("Alerts and popups interactions", async () => {

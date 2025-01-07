@@ -7,7 +7,6 @@ export const config = {
   // ====================
   // WebdriverIO supports running e2e tests as well as unit and component tests.
   runner: "local",
-  tsConfigPath: "./tsconfig.json",
 
   //
   // ==================
@@ -24,7 +23,7 @@ export const config = {
   // The path of the spec files will be resolved relative from the directory of
   // of the config file unless it's absolute.
   //
-  specs: ["./features/**/*.feature"],
+  specs: ["./test/features/**/*.feature"],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
@@ -132,7 +131,7 @@ export const config = {
   // If you are using Cucumber you need to specify the location of your step definitions.
   cucumberOpts: {
     // <string[]> (file/dir) require files before executing features
-    require: glob.sync("./features/step-definitions/**/*js"),
+    require: glob.sync("./test/step-definitions/**/*.js"),
     // <boolean> show full backtrace for errors
     backtrace: false,
     // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)

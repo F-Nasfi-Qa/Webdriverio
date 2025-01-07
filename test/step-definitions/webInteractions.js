@@ -1,13 +1,18 @@
 import { Given, When } from "@wdio/cucumber-framework";
-//import * as chai from "chai";
+import * as chai from "chai";
 
 /**
  * Web Interactions Feature
  */
+let expectedUrl = "https://the-internet.herokuapp.com/";
 
 Given("A web page is opened", async () => {
+  let expectedUrl = "https://the-internet.herokuapp.com/";
+
   await browser.url("");
   await browser.maximizeWindow();
+
+  chai.expect(await browser.getUrl()).to.equal(expectedUrl);
 });
 
 When("Performs a web interactions", async () => {
