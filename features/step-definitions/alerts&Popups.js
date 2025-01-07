@@ -19,17 +19,17 @@ When("Alerts and popups interactions", async () => {
     await browser.acceptAlert();
   }
 
-  // // 2.Open the Js confirm
-  // await $("=Click for JS Confirm").click();
-  // if (browser.isAlertOpen()) {
-  //   await browser.dismissAlert();
-  // }
+  // 2.Open the Js confirm
+  await $("=Click for JS Confirm").click();
+  if (browser.isAlertOpen()) {
+    await browser.dismissAlert();
+  }
 
-  // // 3.Open the Js prompt
-  // await $("=Click for JS Prompt").click();
-  // if (browser.isAlertOpen()) {
-  //   await browser.dismissAlert();
-  // }
+  // 3.Open the Js prompt
+  await $("=Click for JS Prompt").click();
+  if (browser.isAlertOpen()) {
+    await browser.dismissAlert();
+  }
 
   await browser.debug();
 });
