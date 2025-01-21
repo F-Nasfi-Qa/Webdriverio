@@ -1,9 +1,38 @@
 import { Given, When } from "@wdio/cucumber-framework";
+import * as chai from "chai";
+import { browser, $ } from "@wdio/globals";
+import { Key } from "webdriverio";
 
-Given(`Frames page is opened`, () => {
-  // [Given] Sets up the initial state of the system.
+/**
+ * Frames interactions feature
+ */
+
+//Variables declarations
+let expectedUrl = "https://the-internet.herokuapp.com/frames";
+let iFramesBtn = $("=iFrame");
+let iFrame = $("#mce_0_ifr");
+let paragraphBody_iFrame = $("#tinymce");
+
+Given(`Frames page is opened`, async () => {
+  await browser.url("https://en.wikipedia.org/wiki/Amazon_(company)");
+  await browser.maximizeWindow();
+
+  //chai.expect(await browser.getUrl()).to.equal(expectedUrl);
 });
 
-When(`Frames interactions`, () => {
-  // [When] Describes the action or event that triggers the scenario.
+// 1.Switch to iFrame
+//Given(`iFrames is opened and switch to it`, async () => {
+//await iFramesBtn.click();
+
+//await browser.switchFrame(iFrame);
+
+//await paragraphBody_iFrame.setValue(`Typing into frame...`);
+
+//await browser.switchToParentFrame();
+//});
+
+When(`Keys interactions`, async () => {
+await browser.keys([Key.Control, "A"]);
+
+  await browser.pause(2000);
 });

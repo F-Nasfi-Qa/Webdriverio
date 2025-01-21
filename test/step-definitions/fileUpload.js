@@ -17,7 +17,7 @@ Given("File upload page is opened", async () => {
 When("File upload interactions", async () => {
   let pathTextFileToDownload = `${process.cwd()}/data/fileToUpload/wallpaperflare.com_wallpaper.jpg`;
   let fileName = pathTextFileToDownload.slice(95);
-  
+
   await $("#file-upload").addValue(pathTextFileToDownload);
   await $("#file-submit").click();
 
