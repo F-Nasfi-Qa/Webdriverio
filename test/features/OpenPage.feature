@@ -1,6 +1,5 @@
 Feature: Open page
 
-  @OpenPage
   Scenario Outline: Open page scenario
     Given Google page is opened
     When Search with <searchItem>
@@ -8,5 +7,5 @@ Feature: Open page
     Then URL should match with <expectedUrl>
 
     Examples:
-      | testId | searchItem | expectedUrl            |
+      | TestId | searchItem | expectedUrl            |
       | sc_01  | 'wdio'     | 'https://webdriver.io/' |

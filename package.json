@@ -28,6 +28,8 @@
     "@wdio/types": "^9.2.8",
     "chai": "^5.1.2",
     "glob": "^11.0.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-gherkin": "^3.1.1",
     "webdriver": "^9.5.4"
   },
   "dependencies": {
