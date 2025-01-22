@@ -8,10 +8,10 @@ import { Key } from "webdriverio";
  */
 
 //Variables declarations
-let expectedUrl = "https://the-internet.herokuapp.com/frames";
-let iFramesBtn = $("=iFrame");
-let iFrame = $("#mce_0_ifr");
-let paragraphBody_iFrame = $("#tinymce");
+// let expectedUrl = "https://the-internet.herokuapp.com/frames";
+// let iFramesBtn = $("=iFrame");
+// let iFrame = $("#mce_0_ifr");
+// let paragraphBody_iFrame = $("#tinymce");
 
 Given(`Frames page is opened`, async () => {
   await browser.url("https://en.wikipedia.org/wiki/Amazon_(company)");
@@ -32,7 +32,17 @@ Given(`Frames page is opened`, async () => {
 //});
 
 When(`Keys interactions`, async () => {
-await browser.keys([Key.Control, "A"]);
+  await $("#searchInput").addValue("amazon");
+
+  await $("//*[@id='searchform']/div/div/div[1]").click(); // Selectionner la barre de recherche dans wikipedia
+
+  await browser.keys([Key.Control, "A"]);
+
+  await browser.keys([Key.Control, "X"]);
+
+  await browser.keys([Key.Control, "V"]);
+
+  await browser.keys(Key.Enter);
 
   await browser.pause(2000);
 });
