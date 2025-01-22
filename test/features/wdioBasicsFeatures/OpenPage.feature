@@ -7,5 +7,5 @@ Feature: Open page
     Then URL should match with <expectedUrl>
 
     Examples:
-      | TestId | searchItem | expectedUrl            |
-      | sc_01  | 'wdio'     | 'https://webdriver.io/' |
+      | TestId    | searchItem | expectedUrl             |
+      | sc_bas_01 | 'wdio'     | 'https://webdriver.io/' |

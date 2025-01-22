@@ -5,5 +5,5 @@ Feature: Alerts & poups feature
     When Alerts and popups interactions
 
     Examples:
-      | testId |
-      | sc_03  |
+      | testId    |
+      | sc_bas_03 |

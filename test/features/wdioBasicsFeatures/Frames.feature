@@ -6,5 +6,5 @@ Feature: Frames feature
     When Keys interactions
 
     Examples:
-      | TestId |
-      | SC_05  |
+      | TestId    |
+      | sc_bas_05 |

@@ -5,5 +5,5 @@ Feature: File upload feature
     When File upload interactions
 
     Examples:
-      | TestId |
-      | sc_04  |
+      | TestId    |
+      | sc_bas_04 |

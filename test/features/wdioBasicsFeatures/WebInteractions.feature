@@ -5,5 +5,5 @@ Feature: Web Interactions feature
     When Performs a web interactions
 
     Examples:
-      | TestId |
-      | sc_02  |
+      | TestId    |
+      | sc_bas_02 |

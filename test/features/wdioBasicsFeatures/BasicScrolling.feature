@@ -5,5 +5,5 @@ Feature: Basic scrolling Feature
       When Basic scrolling interactions
 
       Examples:
-         | TestId |
-         | sc_06  |
+         | TestId    |
+         | sc_bas_06 |
