@@ -7,8 +7,8 @@ import { browser, $ } from "@wdio/globals";
  */
 
 // Variables declarations
-let expectedUrl = "https://www.amazon.com.au/";
-let elementToView = $("=Conditions of Use & Sale");
+let expectedUrl = "https://www.tunisianet.com.tn/";
+let elementToView = $("//*[@id='block-reassurance']/ul/li[1]/div");
 
 Given(`Basic scrolling page opened`, async () => {
   await browser.url("/");
