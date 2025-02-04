@@ -1,5 +1,5 @@
-Feature: Alerts & poups feature
-
+Feature: Alerts & popups feature
+  @AlertsAndPopupsFeature
   Scenario Outline: Demo alerts and Popups scenario
     Given Alerts and popups page is opened
     When Alerts and popups interactions

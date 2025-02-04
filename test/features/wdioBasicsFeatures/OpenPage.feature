@@ -1,5 +1,5 @@
-Feature: Open page
-
+Feature: Open page feature
+  @OpenPage
   Scenario Outline: Open page scenario
     Given Google page is opened
     When Search with <searchItem>

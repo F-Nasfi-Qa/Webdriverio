@@ -1,5 +1,5 @@
 Feature: Basic scrolling Feature
-
+   @BasicScrolling
    Scenario Outline: Basic scrolling scenario
       Given Basic scrolling page opened
       When Basic scrolling interactions
